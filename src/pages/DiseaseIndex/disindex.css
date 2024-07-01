@@ -21,6 +21,14 @@
     padding: 10px;
     list-style-type: disc;
 }
+.dis-images{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.dis-img{
+    max-width: 600px;
+}
 .check-diabetes{
     margin-top: 10px;
     margin-left: 640px;
