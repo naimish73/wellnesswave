@@ -1,6 +1,7 @@
 import React from 'react'
+import './Signup.css'
 
-export const Signup = () => {
+const Signup = () => {
   return (
     <div className='signup'>
         <div className='signup-container'>
@@ -22,3 +23,4 @@ export const Signup = () => {
     </div>
   )
 }
+export default Signup
