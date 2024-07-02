@@ -1,0 +1,125 @@
+/* .homepage{
+    color: white;
+    background-color: black;
+}
+.homepage-container{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.gh-img{
+    margin-right: 180px;
+    margin-left: 180px;
+    padding: 10px;
+    width: 427px;
+    height: 320px;
+}
+.left-text{
+    margin-right: 50px;
+}
+.hp-h1{
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.hp-p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.disease-index{
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+
+.homepage {
+    color: #fff;
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .homepage-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .left-text {
+    flex-basis: 40%;
+    margin-right: 20px;
+  }
+  
+  .hp-h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .hp-p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .disease-index {
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .disease-index:hover {
+    background-color: #3e8e41;
+  }
+  
+  .homepage-image {
+    flex-basis: 40%;
+    margin-left: 20px;
+  }
+  
+  .gh-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .homepage-features {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hf-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .feature {
+    flex-basis: 30%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: lightgreen;
+  }
+  
+  .feature h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .feature p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }

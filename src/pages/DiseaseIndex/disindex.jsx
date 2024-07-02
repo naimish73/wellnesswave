@@ -1,6 +1,10 @@
 import React from 'react'
 import {useNavigate} from 'react-router-dom'
 import './disindex.css'
+import diabetesImage from '../../assets/images/diabetes.png'
+import cancerImage from '../../assets/images/breastcancer.jpg'
+import heartImage from '../../assets/images/heart.png'
+
 
 const Disindex = () => {
     const navigate = useNavigate()
@@ -12,10 +16,10 @@ const Disindex = () => {
         <div className='disindex-container'>
             <h1 className='dis-h1'>WellnessWave - Diseases Index</h1>
             <p className='dis-p1'>This is a directory of all the diseases that WellnessWave can generate assessments for patient. This index provides in depth details about the disease including its symptoms.</p>
-
             <h2 className='dis-h2'>1. Diabetes:</h2>
             <div className='dis-images'>
-                <img className='dis-img' src="" />Img1<br/><br/>
+                <img className='dis-img' src={diabetesImage} /><br/><br/>
+                <p>Fig1. Complication of Diabetes.</p><br/>
             </div>
             <p className='dis-p1'>Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. Blood glucose is your main source of energy and comes from the food you eat. Insulin, a hormone made by the pancreas, helps glucose from food get into your cells to be used for energy.</p>
             <h3 className='dis-h3'>What health problems can people with diabetes develop? </h3>
@@ -38,7 +42,8 @@ const Disindex = () => {
             
             <h2 className='dis-h2'>2. Breast Cancer:</h2>
             <div className='dis-images'>
-                <img className='dis-img' src="" />Img2<br/><br/>
+                <img className='dis-img' src={cancerImage} /><br/><br/>
+                <p>Fig2. cells of Breast Cancer.</p><br/>
             </div>
             {/* <p>Cancer is a group of diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body. These contrast with benign tumors, which do not spread.</p> */}
             <p className='dis-p1'>Breast cancer is cancer that develops from breast tissue. Signs of breast cancer may include a lump in the breast, a change in breast shape, dimpling of the skin, fluid coming from the nipple, a newly inverted nipple, or a red or scaly patch of skin.<br/></p>
@@ -66,7 +71,8 @@ const Disindex = () => {
 
             <h2 className='dis-h2'>3. Heart Disease:</h2>
             <div className='dis-images'>
-                <img className='dis-img' src="" />Img3<br/><br/>
+                <img className='dis-img' src={heartImage} /><br/><br/>
+                <p>Fig3. Complication of Heart.</p><br/>
             </div>
             <h3 className='dis-h3'>Overview</h3>
             <p className='dis-p1'>Heart disease describes a range of conditions that affect your heart. Diseases under the heart disease umbrella include blood vessel diseases, such as coronary artery disease; heart rhythm problems (arrhythmias); and heart defects you're born with (congenital heart defects), among others.<br/>
