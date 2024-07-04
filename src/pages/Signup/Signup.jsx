@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './Signup.css';
+import { Link, useNavigate } from 'react-router-dom';
+import authService from '../../appwrite/auth';
+
 
 function Signup() {
   const [firstName, setFirstName] = useState('');
@@ -9,6 +12,8 @@ function Signup() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [agree, setAgree] = useState(false);
   const [error, setError] = useState(null);
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,9 +25,14 @@ function Signup() {
       setError('Passwords do not match');
       return;
     }
+
+    if (email!== '' && password!== '' && username!== '' ) {
+      authService.createAccount({email,confirmPassword,username });
+    }
     // Call API to create new user
     // For demo purposes, just simulate a successful signup
     console.log('Signup successful!');
+    navigate('/');
   };
 
   return (
@@ -32,54 +42,46 @@ function Signup() {
           <h1>Sign Up</h1>
           <form onSubmit={handleSubmit}>
             <div className='fn-ln'>
-              <label className='signup-label'>First Name:</label>
+             
+              <label className='signup-label'>Username:</label>
               <input
                 className='signup-input'
+                name='username'
                 type="text"
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-                placeholder="Enter first name"
-              />
-              <br />
-              <label className='signup-label'>Last Name:</label>
-              <input
-                className='signup-input'
-                type="text"
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-                placeholder="Enter last name"
+                placeholder="Enter username"
               />
             </div>
+
             <br />
+
             <label className='signup-label'>Email:</label>
             <input
+            name='email'
               className='signup-input'
               type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter email"
             />
+
             <br />
+
             <label className='signup-label'>Password:</label>
             <input
+              name='password'
               className='signup-input'
               type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter password"
             />
             <br />
             <label className='signup-label'>Confirm Password:</label>
             <input
+              name='confirmPassword'
               className='signup-input'
               type="password"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
               placeholder="Confirm password"
             />
             <br />
             <div className="signup-agree">
-              <input
+              <input  
                 type="checkbox"
                 checked={agree}
                 onChange={(e) => setAgree(e.target.checked)}
@@ -89,6 +91,12 @@ function Signup() {
             {error && <div className="error">{error}</div>}
             <button className='signup-btn' type="submit">Continue</button>
           </form>
+          
+          
+          <Link to={'/signup'}>
+            Don't have an account ? Sign Up Now
+          </Link>
+          
         </div>
       </div>
     </div>
