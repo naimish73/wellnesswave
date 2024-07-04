@@ -3,6 +3,8 @@ require('dotenv').config();
 
 const API_KEY = process.env.API_KEY;
 
+prediction=0;
+
 function getToken(errorCallback, loadCallback) {
     const options = {
         method: 'POST',
@@ -82,13 +84,14 @@ getToken(
         console.log('Payload values: ', payload.input_data[0].values);
 
         const scoring_url = "https://us-south.ml.cloud.ibm.com/ml/v4/deployments/diabetes03/predictions?version=2021-05-01";
+        
         apiPost(
             scoring_url,
             tokenResponse.access_token,
             payload,
             (resp) => {
                 console.log("response Scoring response: ");
-                // console.log(resp);
+                console.log(resp);
                 console.log("Scoring response fields: ", resp.predictions[0].fields);
                 console.log("Scoring response values: ", resp.predictions[0].values);
             },
