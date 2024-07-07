@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import authService from '../../appwrite/auth';
 
 
+import { Checkbox, CheckboxGroup,Input } from '@chakra-ui/react'
+
 function Signup() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -41,21 +43,22 @@ function Signup() {
         <div className="signup-form">
           <h1>Sign Up</h1>
           <form onSubmit={handleSubmit}>
-            <div className='fn-ln'>
+
+
              
               <label className='signup-label'>Username:</label>
-              <input
+              <Input
                 className='signup-input'
                 name='username'
                 type="text"
                 placeholder="Enter username"
               />
-            </div>
+          
 
             <br />
 
             <label className='signup-label'>Email:</label>
-            <input
+            <Input
             name='email'
               className='signup-input'
               type="email"
@@ -65,7 +68,7 @@ function Signup() {
             <br />
 
             <label className='signup-label'>Password:</label>
-            <input
+            <Input
               name='password'
               className='signup-input'
               type="password"
@@ -73,7 +76,7 @@ function Signup() {
             />
             <br />
             <label className='signup-label'>Confirm Password:</label>
-            <input
+            <Input
               name='confirmPassword'
               className='signup-input'
               type="password"
@@ -81,7 +84,7 @@ function Signup() {
             />
             <br />
             <div className="signup-agree">
-              <input  
+              <Input  
                 type="checkbox"
                 checked={agree}
                 onChange={(e) => setAgree(e.target.checked)}
@@ -89,13 +92,15 @@ function Signup() {
               <p>By continuing, I agree to terms of use & privacy policy.</p>
             </div>
             {error && <div className="error">{error}</div>}
-            <button className='signup-btn' type="submit">Continue</button>
+            <button className='signup-btn' type="submit">Sign Up</button>
           </form>
           
-          
-          <Link to={'/signup'}>
-            Don't have an account ? Sign Up Now
-          </Link>
+          <h2>
+
+            <Link to={'/login'}>
+              Already have an account ? Login Now
+            </Link>
+          </h2>
           
         </div>
       </div>

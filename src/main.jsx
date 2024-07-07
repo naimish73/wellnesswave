@@ -12,6 +12,7 @@ import Contact from './Pages/Contact.jsx';
 import FAQ from './Pages/FAQ.jsx'; 
 import DiabetesPage from './Pages/Diabities.jsx';
 import Login from './Pages/Login/Login.jsx';
+import Signup from './Pages/Signup/Signup.jsx';
 import store from './store/store.js';
 import { Provider } from 'react-redux';
 
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
 {
   path: "/login",
   element:<Login />,
+},
+{
+  path: "/signup",
+  element:<Signup />,
 },
 ]);
 
