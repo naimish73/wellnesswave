@@ -5,7 +5,7 @@ import Navbar from "../Components/navbar"
            <ChakraProvider>
              
             
-            <Navbar></Navbar>
+            <Navbar/>
             <h1>Blog</h1>
         
            </ChakraProvider>
