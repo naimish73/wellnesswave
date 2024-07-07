@@ -1,7 +1,52 @@
 import { Flex, Text, Button, HStack, Box, Divider, Image } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigation } from 'react-router-dom';
+import { useState,useEffect } from 'react';
+import authService from '../appwrite/auth';
+// const [username, setUsername] = useState(null);
+//   const navigate = useNavigate();
+
+//   useEffect(() => {
+//     const fetchUser = async () => {
+//       const username = await authService.getCurrentUser();
+//       setUsername(username?.name || null);
+//     };
+//     fetchUser();
+//   }, []);
+
+//   const handleLogin = () => {
+//     navigate('/login');
+//   };
+
+//   const handleSignup = () => {
+//     navigate('/signup');
+//   };
+
+//   const handleLogout = async () => {
+//     await authService.logout();
+//     setUsername(null);
+//     navigate('/login');
+//   };
 
 export default function Navbar() {
+    const [username, setUsername] = useState(null);
+    const navigate = useNavigation();
+
+    useEffect(() => {
+        const fetchUser = async () => {
+        const username = await authService.getCurrentUser();
+        console.log(username);
+        setUsername(username?.name || null);
+        };
+        fetchUser();
+    }, []);
+
+
+    const handleLogout = async () => {
+        await authService.logout();
+        setUsername(null);
+        navigate('/login');
+    };
+
     return (
         <>  
             <Flex as="nav" boxShadow='dark-xl' bg="" color="" px='10px' justify="space-between">
@@ -25,10 +70,21 @@ export default function Navbar() {
                     <Box _hover={{ color: 'green.300' }}><Link to="/FAQ">FAQs</Link></Box>
                 </HStack>
 
-                <HStack spacing='20px'>
-                    <Button colorScheme='blue' variant='outline'><Link to="/login">Login</Link></Button>
-                    <Button colorScheme='blue' variant='outline'><Link to="/signup">Sign Up</Link></Button>
-                </HStack>
+                {username ? (
+
+                    <HStack spacing='20px'>
+                        <h1>Hello, {username}</h1>
+                        <Button colorScheme='blue' variant='outline' onClick={handleLogout}>Logout</Button>
+                    </HStack>
+                    ) : (
+                    <>
+                    
+                        <HStack spacing='20px'>
+                            <Button colorScheme='blue' variant='outline'><Link to="/login">Login</Link></Button>
+                            <Button colorScheme='blue' variant='outline'><Link to="/signup">Sign Up</Link></Button>
+                        </HStack>
+                    </>
+                    )}
             </Flex>
             <Divider />
         </>
