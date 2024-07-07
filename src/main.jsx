@@ -7,10 +7,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Blog from './Pages/Blog.jsx';  
-import Navbar from './Components/navbar.jsx';
+// import Navbar from './Components/navbar.jsx';
 import Contact from './Pages/Contact.jsx';
 import FAQ from './Pages/FAQ.jsx'; 
 import DiabetesPage from './Pages/Diabities.jsx';
+import Login from './Pages/Login/Login.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
 {
   path: "/dia",
   element:<DiabetesPage />,
+},
+{
+  path: "/login",
+  element:<Login />,
 },
 ]);
 

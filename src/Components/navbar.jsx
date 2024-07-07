@@ -27,11 +27,11 @@ export default function Navbar() {
                     <Box  _hover={{color:'pink.600'}}><Link to="/">Home</Link></Box>
                     <Box  _hover={{color:'cyan.600'}}><Link to="/">About</Link></Box>
                     <Box  _hover={{color:'yellow.300'}}><Link to="/Contact">Contact</Link></Box>
-                    <Box  _hover={{color:'green.300'}}><Link to="/FAQ">FAQ's</Link></Box>
+                    <Box  _hover={{color:'green.300'}}><Link to="/FAQ">FAQs</Link></Box>
                 </HStack>
 
                 <HStack spacing='20px'>
-                    <Button  colorScheme='blue' variant='outline'>LogIn </Button>
+                    <Button  colorScheme='blue' variant='outline'><Link to="/login">Login</Link> </Button>
                     <Button  colorScheme='blue' variant='outline'>SignUp </Button>
                 </HStack>
                 

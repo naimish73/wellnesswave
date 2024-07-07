@@ -1,4 +1,4 @@
-import App from '../App.jsx'
+// import App from '../App.jsx'
 import { ChakraProvider,Heading,Box,Text,Stack,Link } from '@chakra-ui/react'
 import Navbar from '../Components/navbar.jsx'
 import './contact.css'
