@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../utils/AuthContext'
 
@@ -6,23 +6,31 @@ import { useAuth } from '../utils/AuthContext'
 const Login = () => {
   const {user, loginUser} = useAuth()
   const navigate = useNavigate()
-
+  const [error, setError] = useState(null)
   const loginForm = useRef(null)
 
   useEffect(() => {
     if (user){
       navigate('/')
     }
-  })
+  }, [user, navigate])
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const email = loginForm.current.email.value
     const password = loginForm.current.password.value
+
+    console.log('email', email)
+    console.log('password', password)
     
     const userInfo = {email, password}
-
-    loginUser(userInfo)
+    const result = await loginUser(userInfo)
+    if(result.success) {
+      navigate('/')
+    } else {
+      setError(result.error.message)
+    }
+    
   }
 
   return (
@@ -62,8 +70,11 @@ const Login = () => {
             </div>
 
           </form>
+          {
+            error && <p>{error}</p>
+          }
 
-          <p>Don't have an account? <Link to="/register">Register</Link></p>
+          <p>Don't have an account? <Link to="/signup">Register</Link></p>
 
         </div>
     </div>

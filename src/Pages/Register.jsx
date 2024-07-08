@@ -1,28 +1,37 @@
 import React, {useRef} from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../utils/AuthContext'
 import { ID} from 'appwrite';
 
 const Register = () => {
   const registerForm = useRef(null)
   const {registerUser} = useAuth()
+  const navigate = useNavigate()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
     const name = registerForm.current.name.value
     const email = registerForm.current.email.value
     const password1 = registerForm.current.password1.value
     const password2 = registerForm.current.password2.value
+
     console.log(name, email, password1)
+    
     if(password1 !== password2){
         alert('Passwords did not match!')
         return 
     }
     
     const userInfo = { name, email, password1};
+    const result = await registerUser(userInfo)
+
     console.log(userInfo)
-    registerUser(userInfo)
+    if(result.success) {
+      navigate('/')
+    } else {
+      alert(result.error.message)
+    }
 }
 
   return (
