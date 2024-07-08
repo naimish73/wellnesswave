@@ -12,7 +12,6 @@ import Contact from './pages/Contact.jsx';
 import FAQ from './pages/FAQ.jsx'; 
 import DiabetesPage from './pages/Diabities.jsx';
 import Login from './pages/Login/Login.jsx';
-import Signup from './pages/Signup/Signup.jsx';
 import store from './store/store.js';
 import { Provider } from 'react-redux';
 import Signup from './pages/Register.jsx';
