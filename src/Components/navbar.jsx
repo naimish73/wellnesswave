@@ -66,6 +66,7 @@ export default function Navbar() {
                 <HStack as='b' spacing="40px" color="pink.300" fontSize='md' cursor="pointer">
                     <Box _hover={{ color: 'pink.600' }}><Link to="/">Home</Link></Box>
                     <Box _hover={{ color: 'cyan.600' }}><Link to="/">About</Link></Box>
+                    <Box _hover={{ color: 'yellow.300' }}><Link to="/test">Test</Link></Box>
                     <Box _hover={{ color: 'yellow.300' }}><Link to="/Contact">Contact</Link></Box>
                     <Box _hover={{ color: 'green.300' }}><Link to="/FAQ">FAQs</Link></Box>
                 </HStack>

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import './Signup.css';
 import { Link, useNavigate } from 'react-router-dom';
 import authService from '../../appwrite/auth';
 
 
-import { Checkbox, CheckboxGroup,Input } from '@chakra-ui/react'
+import { Input } from '@chakra-ui/react'
 
 function Signup() {
   const [username, setUsername] = useState('');
