@@ -1,12 +1,15 @@
-import React, {useRef} from 'react'
+import React, {useRef,useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../utils/AuthContext'
-import { ID} from 'appwrite';
+
+import './Signup/Signup.css'
 
 const Register = () => {
   const registerForm = useRef(null)
   const {registerUser} = useAuth()
   const navigate = useNavigate()
+  const [error, setError] = useState(null)
+
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -16,7 +19,6 @@ const Register = () => {
     const password1 = registerForm.current.password1.value
     const password2 = registerForm.current.password2.value
 
-    console.log(name, email, password1)
     
     if(password1 !== password2){
         alert('Passwords did not match!')
@@ -30,72 +32,68 @@ const Register = () => {
     if(result.success) {
       navigate('/')
     } else {
+      setError(result.error.message)
       alert(result.error.message)
+
     }
 }
 
   return (
-    <div className="container">
-      <div className="login-register-container">
-        <form ref={registerForm} onSubmit={handleSubmit}>
+    <div className='signup'>
+      <div className="signup-container">
+        <div className="signup-form">
+          <h1>Sign Up</h1>
+          <form ref={registerForm} onSubmit={handleSubmit}>
+             
+              <label className='signup-label'>Username:</label>
+              <br/>
+              <input
+                className='signup-input'
+                name='name'
+                type="text"
+                placeholder="Enter username"
+              />
 
-        <div className="form-field-wrapper">
-              <label>Name:</label>
-              <input 
-                required
-                type="text" 
-                name="name"
-                placeholder="Enter name..."
-                />
-          </div>
+            <br />
 
-          <div className="form-field-wrapper">
-              <label>Email:</label>
-              <input 
-                required
-                type="email" 
-                name="email"
-                placeholder="Enter email..."
-                />
-          </div>
+            <label className='signup-label'>Email:</label>
+            <input
+            name='email'
+              className='signup-input'
+              type="email"
+              placeholder="Enter email"
+            />
 
-          <div className="form-field-wrapper">
-              <label>Password:</label>
-              <input 
-                type="password"
-                name="password1" 
-                placeholder="Enter password..."
-                autoComplete="password1"
-                />
-          </div>
+            <br />
 
-          <div className="form-field-wrapper">
-              <label>Confirm Password:</label>
-              <input 
-                type="password"
-                name="password2" 
-                placeholder="Confirm password..."
-                autoComplete="password2"
-                />
-          </div>
-
-
-          <div className="form-field-wrapper">
-
-              <input 
-                type="submit" 
-                value="Register"
-                className="btn"
-                />
-
-          </div>
-
-        </form>
-
-        <p>Already have an account? <Link to="/login">Login</Link></p>
-
+            <label className='signup-label'>Password:</label>
+            <input
+              name='password1'
+              className='signup-input'
+              type="password"
+              placeholder="Enter password"
+            />
+            <br />
+            <label className='signup-label'>Confirm Password:</label>
+            <input
+              name='password2'
+              className='signup-input'
+              type="password"
+              placeholder="Confirm password"
+            />
+            
+            {error && <div className="error">{error}</div>}
+            <button className='signup-btn' type="submit">Sign Up</button>
+          </form>
+          
+          
+          <Link to={'/login'}>
+            Already have an account ? Log In Now
+          </Link>
+          
+        </div>
       </div>
-  </div>
+    </div>
   )
 }
 

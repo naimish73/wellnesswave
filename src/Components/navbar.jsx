@@ -41,11 +41,11 @@ export default function Navbar() {
                         fontWeight='extrabold'
                         mt='25px'
                     >
-                        Wellness Wave
+                        <Link to='/'>Wellness Wave</Link>
                     </Text>
                 </Flex>
 
-                <HStack as='b' spacing="40px" color="pink.300" fontSize='md' cursor="pointer">
+                <HStack as='b' spacing="40px" color="pink.300" fontSize='xl' cursor="pointer">
                     <Box _hover={{ color: 'pink.600' }}><Link to="/">Home</Link></Box>
                     <Box _hover={{ color: 'cyan.600' }}><Link to="/blog">Blog</Link></Box>
                     <Box _hover={{ color: 'yellow.300' }}><Link to="/test">Test</Link></Box>
@@ -55,8 +55,13 @@ export default function Navbar() {
 
                 {username ? (
                     <>
-                        <h1>Hello, {username}</h1>
-                        <HStack spacing='20px'>
+                        <HStack spacing={8}>
+                            <Text 
+                            bgGradient='linear(to-l, blue.300, cyan.400)'
+                            bgClip='text'
+                            fontSize='xl'
+                            fontWeight='extrabold'
+                            >Hello, {username}</Text>
                             <Button colorScheme='blue' variant='outline' onClick={handleLogout}>Logout</Button>
                         </HStack>
                     </>

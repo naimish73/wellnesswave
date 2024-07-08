@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import { useAuth } from '../utils/AuthContext'
-
+import React, { useEffect, useRef, useState } from 'react';
+import {Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../utils/AuthContext';
+import './Login/Login.css';
 
 const Login = () => {
   const {user, loginUser} = useAuth()
@@ -34,51 +34,44 @@ const Login = () => {
   }
 
   return (
-    <div className="container">
-        <div className="login-register-container">
-          <form onSubmit={handleSubmit} ref={loginForm}> 
+    <>
+    <div className="login-container">
+      <div className="login-form">
+        <h1>Login</h1>
+        {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
+        <form onSubmit={handleSubmit} ref={loginForm}>
+          <label className='ln-label'>Email Id:</label>
+          <input
+            name='email'
+            className='ln-input'
+            type="email"
+            placeholder="Enter Your Email Id"
+            
+          />
 
-            <div className="form-field-wrapper">
-                <label>Email:</label>
-                <input 
-                  required
-                  type="email" 
-                  name="email"
-                  placeholder="Enter email..."
-                  />
-            </div>
-
-            <div className="form-field-wrapper">
-                <label>Password:</label>
-                <input 
-                  type="password" 
-                  name="password"
-                  placeholder="Enter password..."
-                  autoComplete="password"
-                  />
-            </div>
-
-
-            <div className="form-field-wrapper">
-    
-                <input 
-                  type="submit" 
-                  value="Login"
-                  className="btn"
-                  />
-
-            </div>
-
-          </form>
+          <br />
+          <label className='ln-label'>Password:</label>
+          <input
+          name='password'
+            className='ln-input'
+            type="password"
+            placeholder="Enter your password"
+            
+          />
+          <br />
           {
             error && <p>{error}</p>
           }
+          <button className='ln-btn' type="submit">Login</button>
+        </form>
 
-          <p>Don't have an account? <Link to="/signup">Register</Link></p>
-
-        </div>
+          <Link to={'/signup'}>
+            Don't have an account ? Sign Up Now
+          </Link>
+      </div>
     </div>
-  )
-}
+    </>
+  );
+};
 
-export default Login
+export default Login;
