@@ -7,8 +7,7 @@ import authService from '../../appwrite/auth';
 import { Checkbox, CheckboxGroup,Input } from '@chakra-ui/react'
 
 function Signup() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -52,6 +51,7 @@ function Signup() {
                 name='username'
                 type="text"
                 placeholder="Enter username"
+                onChange={(e) => setUsername(e.target.value)}
               />
           
 
@@ -63,6 +63,7 @@ function Signup() {
               className='signup-input'
               type="email"
               placeholder="Enter email"
+              onChange={(e) => setEmail(e.target.value)}
             />
 
             <br />
@@ -73,6 +74,7 @@ function Signup() {
               className='signup-input'
               type="password"
               placeholder="Enter password"
+              onChange={(e) => setPassword(e.target.value)}
             />
             <br />
             <label className='signup-label'>Confirm Password:</label>
@@ -81,6 +83,7 @@ function Signup() {
               className='signup-input'
               type="password"
               placeholder="Confirm password"
+              onChange={(e) => setConfirmPassword(e.target.value)}
             />
             <br />
             <div className="signup-agree">

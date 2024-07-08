@@ -35,7 +35,7 @@ export default function Navbar() {
         const fetchUser = async () => {
         const username = await authService.getCurrentUser();
         console.log(username);
-        setUsername(username?.name || null);
+        setUsername(username?.email || null);
         };
         fetchUser();
     }, []);
@@ -73,7 +73,6 @@ export default function Navbar() {
                 {username ? (
 
                     <HStack spacing='20px'>
-                        <h1>Hello, {username}</h1>
                         <Button colorScheme='blue' variant='outline' onClick={handleLogout}>Logout</Button>
                     </HStack>
                     ) : (
