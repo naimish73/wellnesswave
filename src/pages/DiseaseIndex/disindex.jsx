@@ -8,8 +8,15 @@ import heartImage from '../../assets/images/heart.png'
 
 const Disindex = () => {
     const navigate = useNavigate()
-    const handleClick = () => {
+
+    const handleDiabetesClick = () => {
       navigate('/diabetes')
+    }
+    const handleCancerClick = () => {
+      navigate('/breastcancer')
+    }
+    const handleHeartClick = () => {
+      navigate('/heartdisease')
     }  
   return (
     <div className='disindexpage'>
@@ -35,7 +42,7 @@ const Disindex = () => {
                 <li>Foot problems</li>
             </ul>
             <p className='dis-p1'>Click the below button to check for Diabetes.</p>
-            <p className='dis-p1'><a className="check-diabetes" onClick={handleClick} role="button">Check Diabetes</a></p>
+            <p className='dis-p1'><a className="check-diabetes" onClick={handleDiabetesClick} role="button">Check Diabetes</a></p>
             <br/>
             <hr/>
             <br/>
@@ -64,7 +71,7 @@ const Disindex = () => {
             <br/>Researchers have identified hormonal, lifestyle and environmental factors that may increase your risk of breast cancer. But it's not clear why some people who have no risk factors develop cancer, yet other people with risk factors never do. It's likely that breast cancer is caused by a complex interaction of your genetic makeup and your environment.</p>
             
             <p className='dis-p1'>Click the below button to check for Breast Cancer.</p>
-            <p className='dis-p1'><a className="check-diabetes" onClick={handleClick} role="button">Check Breast Cancer</a></p>
+            <p className='dis-p1'><a className="check-cancer" onClick={handleCancerClick} role="button">Check Breast Cancer</a></p>
             <br/>
             <hr/>
             <br/>
@@ -87,7 +94,7 @@ const Disindex = () => {
                 <li>Pain in the neck, jaw, throat, upper abdomen or back</li>
             </ul>
             <p className='dis-p1'>Click the below button to check for Heart Disease.</p>
-            <p className='dis-p1'><a className="check-diabetes" onClick={handleClick} role="button">Check Heart Disease</a></p>
+            <p className='dis-p1'><a className="check-heart" onClick={handleHeartClick} role="button">Check Heart Disease</a></p>
             <br/>
             <hr/>
             <br/>

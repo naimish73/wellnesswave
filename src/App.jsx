@@ -8,7 +8,7 @@ import { createBrowserRouter, Router, RouterProvider } from 'react-router-dom'
 import Home from './pages/homepage/home'
 import Login from './pages/Login/Login'
 import Signup from './pages/Signup/Signup'
-import Navbar from './Components/Navbar/Navbar'
+// import Navbar from './Components/Navbar/Navbar'
 import Disindex from './pages/DiseaseIndex/disindex'
 import Diabetes from './pages/Diabetes/diabetes'
 

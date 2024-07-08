@@ -28,8 +28,9 @@
 }
 .dis-img{
     max-width: 600px;
+    justify-content: center;
 }
-.check-diabetes{
+.check-diabetes,.check-cancer,.check-heart{
     margin-top: 10px;
     margin-left: 640px;
     margin-bottom: 10px;

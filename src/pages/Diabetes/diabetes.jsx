@@ -11,7 +11,7 @@ const Diabetes = () => {
                 <div className="tabcontent" id="new">
                     <div className="form-group">
                         <label className="form-label" htmlFor="pregnancies">Number of Pregnancies</label>
-                        <input className="form-control" type="number" name="pregnancies" placeholder="eg. 0 for male" required="required"/>
+                        <input className="form-control" type="number" name="pregnancies" placeholder="eg. 1 " required="required"/>
                     </div>
                     <div className="form-group">
                         <label className="form-label" htmlFor="glucose">Glucose Level (mg/dL)</label>
