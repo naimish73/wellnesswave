@@ -11,10 +11,10 @@ import Blog from './Pages/Blog.jsx';
 import Contact from './Pages/Contact.jsx';
 import FAQ from './Pages/FAQ.jsx'; 
 import DiabetesPage from './Pages/Diabities.jsx';
-import Login from './Pages/Login/Login.jsx';
+import Login from './Pages/Login.jsx';
 import store from './store/store.js';
 import { Provider } from 'react-redux';
-import Signup from './Pages/Signup/Signup.jsx';
+import Signup from './Pages/Register.jsx';
 import Test from './Pages/Test.jsx';
 const router = createBrowserRouter([
   {
