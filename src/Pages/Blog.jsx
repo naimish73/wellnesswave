@@ -4,21 +4,23 @@ import Footer from "../Components/Footer.jsx"
 
 export default function Blog() {
         return (
-           <ChakraProvider>
+           <ChakraProvider >
              
             
             <Navbar></Navbar>   
-            <Stack>
+            <Stack bg='purple.500' fontFamily='Times-new-roman'>
                 
-            <Text as='b' fontSize='5xl' p='40px'>Blog</Text>
+            <Text as='b' fontSize='5xl' p='30px' fontFamily='Montserrat' color='white'>Wellness Blog</Text>
                 <Box pt='40px'>
-            <Text as='b' p='10px' m='30px' fontSize='3xl'>Educational Articles: Disease Information</Text>
-          
+            <Text as='b' p='30px' m='0px' fontSize='4xl' color='white' fontFamily='Montserrat'>Educational Articles: Disease Information</Text>
+          <br />
+          <br />
+          <br />
             <Container maxW="auto" centerContent>
-            <Box p="6" mb="8" boxShadow="base" borderRadius="md" bg="white">
+            <Box p="6" mb="8" boxShadow="base" borderRadius="md" bg="pink.200">
                 <Flex align="center" justify="space-between">
                     <Box flex="1" mr="4">
-                        <Heading as="h2" size="lg" mb="4">
+                        <Heading as="h2" size="lg" mb="4" fontFamily='Montserrat'>
                             Understanding Common Health Concerns: Breast Cancer
                         </Heading>
                         <Text fontSize="lg">
@@ -38,7 +40,7 @@ export default function Blog() {
                     </Box>
                     <Box flex="1">
                         <Image
-                            src="https://th.bing.com/th/id/OIP.gZX4w9AnZ1Ch8M2BBLs2HAHaHZ?w=196&h=195&c=7&r=0&o=5&dpr=1.2&pid=1.7"
+                            src="https://img.freepik.com/free-vector/breast-cancer-awareness-concept_23-2148641276.jpg?t=st=1720457442~exp=1720461042~hmac=f6455b4c5361d58dbe31f3e67494c68c04181a161e710ca1097e35753dfaee7a&w=740"
                             alt="Breast Cancer"
                             maxW="100%"
                             borderRadius="md"
@@ -47,10 +49,10 @@ export default function Blog() {
                 </Flex>
             </Box>
 
-            <Box p="6" mb="8" boxShadow="base" borderRadius="md" bg="white">
+            <Box p="6" mb="8" boxShadow="base" borderRadius="md" bg="yellow.100">
                 <Flex align="center" justify="space-between">
                     <Box flex="1" mr="4">
-                        <Heading as="h2" size="lg" mb="4">
+                        <Heading as="h2" size="lg" mb="4" fontFamily='Montserrat'>
                             Diabetes
                         </Heading>
                         <Text fontSize="lg">
@@ -81,10 +83,10 @@ export default function Blog() {
                 </Flex>
             </Box>
 
-            <Box p="6" mb="8" boxShadow="base" borderRadius="md" bg="white">
+            <Box p="6" mb="8" boxShadow="base" borderRadius="md" bg="green.400" color='white'>
                 <Flex align="center" justify="space-between">
                     <Box flex="1" mr="4">
-                        <Heading as="h2" size="lg" mb="4">
+                        <Heading as="h2" size="lg" mb="4" fontFamily='Montserrat'>
                             Heart Diseases
                         </Heading>
                         <Text fontSize="lg">
