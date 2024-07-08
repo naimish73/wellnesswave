@@ -20,7 +20,7 @@ export default function HorCard(props) {
       <Text>
         {c}
       </Text>
-      <Button colorScheme='blue' variant='outline'>
+      <Button as='Link' colorScheme='blue' variant='outline' >
       {d}
       </Button>
      
