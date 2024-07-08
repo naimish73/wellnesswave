@@ -6,12 +6,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Blog from './Pages/Blog.jsx';  
+import Blog from './pages/Blog.jsx';  
 // import Navbar from './Components/navbar.jsx';
-import Contact from './Pages/Contact.jsx';
-import FAQ from './Pages/FAQ.jsx'; 
-import DiabetesPage from './Pages/Diabities.jsx';
-import Login from './Pages/Login/Login.jsx';
+import Contact from './pages/Contact.jsx';
+import FAQ from './pages/FAQ.jsx'; 
+import DiabetesPage from './pages/Diabities.jsx';
+import Login from './pages/Login/Login.jsx';
 import store from './store/store.js';
 import { Provider } from 'react-redux';
 
