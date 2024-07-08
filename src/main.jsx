@@ -6,7 +6,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Blog from './pages/Blog.jsx';  
+import Blog from './Pages/Blog.jsx';  
 // import Navbar from './Components/navbar.jsx';
 import Contact from './pages/Contact.jsx';
 import FAQ from './pages/FAQ.jsx'; 
@@ -15,7 +15,8 @@ import Login from './pages/Login/Login.jsx';
 import Signup from './pages/Signup/Signup.jsx';
 import store from './store/store.js';
 import { Provider } from 'react-redux';
-
+import Signup from './Pages/Register.jsx';
+import Test from './Pages/Test.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,6 +45,14 @@ const router = createBrowserRouter([
 {
   path: "/signup",
   element:<Signup />,
+},
+{
+  path: "/test",
+  element:<Test />,
+},
+{
+  path: "/blog",
+  element:<Blog />,
 },
 ]);
 
