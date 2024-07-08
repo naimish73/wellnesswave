@@ -1,10 +1,13 @@
 import  { useState } from 'react';
 import './Login.css';
 import authService from '../../appwrite/auth';
-import {  useNavigate } from 'react-router-dom';
+import { Link,  useNavigate } from 'react-router-dom';
 import { login as authLogin } from '../../store/authSlice';
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
+// import Navbar from '../../Components/navbar';
+
+import { Input } from '@chakra-ui/react'
 
 function Login() {
   const navigate = useNavigate();
@@ -30,13 +33,16 @@ function Login() {
   };
 
   return (
+    <>
+    {/* <Navbar /> */}
+
     <div className="login-container">
       <div className="login-form">
         <h1>Login</h1>
         {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
         <form onSubmit={handleSubmit(login)}>
           <label className='ln-label'>Email Id:</label>
-          <input
+          <Input
             className='ln-input'
             type="email"
             placeholder="Enter Your Email Id"
@@ -60,9 +66,20 @@ function Login() {
           />
           <br />
           <button className='ln-btn' type="submit">Login</button>
+
+
         </form>
+
+        <h2>
+
+            <Link to={'/signup'}>
+              Don't have an account ? Sign Up Now
+            </Link>
+          </h2>
+
       </div>
     </div>
+    </>
   );
 }
 
