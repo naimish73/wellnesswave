@@ -24,6 +24,9 @@ import DiabetesPage from './Pages/Diabities.jsx';
 import Login from './Pages/Login.jsx';
 import Test from './Pages/Test.jsx';
 import { AuthProvider } from './utils/AuthContext.jsx';
+import Diabetes from './Pages/Diabetes/diabetes.jsx';
+import Heartdisease from './Pages/HeartDisease/heartdisease.jsx';
+import BreastCancer from './Pages/BreastCancer/breastcancer.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +39,9 @@ const router = createBrowserRouter([
       { path: '/faq', element: <FAQ /> },
       { path: '/dia', element: <DiabetesPage /> },
       { path: '/test', element: <Test /> },
+      { path: '/diabetes', element: <Diabetes /> },
+      { path: '/heartdisease', element: <Heartdisease /> },
+      { path: '/breastcancer', element: <BreastCancer /> },
     ]
   },
   { path: '/login', element: <Login /> },
