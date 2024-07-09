@@ -3,6 +3,7 @@ import { Box, Heading, Text, List, ListItem, UnorderedList, Container, Divider }
 
  export default function  DiabetesPage()  {
   return (
+    
     <Container maxW="container.md" py={8}>
       <Heading as="h1" size="2xl" mb={4} textAlign="center" color="teal.500">Diabetes</Heading>
       <Divider mb={8} />
