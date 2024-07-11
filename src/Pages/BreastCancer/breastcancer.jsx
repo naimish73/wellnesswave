@@ -1,18 +1,19 @@
 import React from 'react'
+import { useState } from 'react';
 import './breastcancer.css'
 
 const breastcancer = () => {
 
     const [formData, setFormData] = useState({
-        Clump_Thickness:'',
-        Uniformity_of_Cell_Size,
-        Uniformity_of_Cell_Shape,
-        Marginal_Adhesion,
-        Single_Epithelial_Cell_Size,
-        Bare_Nuclei,
-        Bland_Chromatin,
-        Normal_Nucleoli,
-        Mitoses
+        'Clump Thickness':'',
+        'Uniformity of Cell Size' : '',
+        'Uniformity of Cell Shape' : '',
+        'Marginal Adhesion' : '',
+        'Single Epithelial Cell Size' : '',
+        'Bare Nuclei' : '',
+        'Bland Chromatin' : '',
+        'Normal Nucleoli' : '',
+        'Mitoses' : ''
         
     });
 
