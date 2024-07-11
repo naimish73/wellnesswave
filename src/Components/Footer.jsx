@@ -1,5 +1,7 @@
 import {Text, HStack, Flex,Box,Image,Input} from '@chakra-ui/react'
 import {SearchIcon}  from '@chakra-ui/icons'
+import { Link, useNavigation } from 'react-router-dom';
+
 
 export default function Footer(){
 
@@ -14,32 +16,27 @@ export default function Footer(){
             pl='40px'
             pb='0px'
             >
-            Welness Wave
+            Wellness Wave
             </Text> 
            <Flex as='b'  pl='80px' pt='0px'  >
             
                
             <Box  p='40px' m='30px'>
                     <Text fontSize='2xl' py='20px'>Links</Text>
-                    <Text  py='10px'>Home</Text>
-                    <Text  py='10px'>About</Text>
-                    <Text py='10px'>Contact</Text>
-                    <Text py='10px' pb='100px'>FAQ's</Text>
+                    <Text  py='10px'><Link to='/'>Home</Link></Text>
+                    <Text  py='10px'><Link to='/blog'>About</Link></Text>
+                    <Text py='10px'><Link to='/Contact'>Contact</Link></Text>
+                    <Text py='10px' pb='100px'><Link to='/FAQ'>FAQs</Link></Text>
             </Box>
 
             <Box  p='40px' m='  50px' > 
                     <Text  fontSize='2xl' as='b' pb='20px '>ML Models</Text>
                     <Text py='10px' pt='30px' >Ask Virtual Assistant</Text>
-                    <Text py='10px' >Heart Related Disease</Text>
-                    <Text py='10px'>Breast Cancer</Text>
-                    <Text py='10px' pb='100px'>Diabities</Text>
+                    <Text py='10px' ><Link to='/blog'>Heart Related Diseases </Link></Text>
+                    <Text py='10px'><Link to='/blog'>Breast Cancer</Link></Text>
+                    <Text py='10px' pb='100px'><Link to='/dia'>Diabites</Link></Text>
             </Box>
-            <Flex p='40px' m='45px' mt='120px' > 
-            <Input px='60px' boxShadow='lg' border='2px' borderColor='green.800' placeholder='Search' size='md'  />
-            
-             <SearchIcon  m='15px'></SearchIcon> 
-
-            </Flex>
+           
 
             <Box  ml='300px' p='30px' m='30px'>
                     <br />

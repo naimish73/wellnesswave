@@ -1,5 +1,6 @@
 import { Heading, Text , Button, Box, Flex, Image, HStack} from '@chakra-ui/react';
 import { PhoneIcon, AddIcon, WarningIcon,ArrowForwardIcon } from '@chakra-ui/icons'
+import { Link, useNavigation } from 'react-router-dom';
 
 
 
@@ -10,11 +11,11 @@ export default function Intro() {
           <HStack bg='purple.600' color='white' pb='80px'>
          
          <Text  ml='30px' pt='100px' >
-                <Text as='b' fontSize='5xl' color='white' >Make a Try to Fight with every diseases</Text>
-                <Text fontSize='lg' pt='20px' >Welcome to Wellness Wave, your trusted source for comprehensive health information and wellness guidance. Our mission is to empower individuals with knowledge about various health conditions, offering insights on prevention, treatment, and management.</Text>
+                <Text as='b' fontSize='5xl' color='white' fontFamily="Montserrat">Cherish your health, cherish your life.</Text>
+                <Text fontSize='22px' pt='20px' fontFamily="Times-new-roman" >Welcome to Wellness Wave, your trusted source for comprehensive health information and wellness guidance. Our mission is to empower individuals with knowledge about various health conditions, offering insights on prevention, treatment, and management.</Text>
         <Box mt='40px'>  
-           <Button size='lg'  colorScheme='gray' mt='24px'>
-             Explore  <ArrowForwardIcon/>
+           <Button as={Link} size='lg'  colorScheme='gray' mt='24px' to="/blog">
+              Explore  <ArrowForwardIcon/>
             </Button>
         </Box>
          </Text>

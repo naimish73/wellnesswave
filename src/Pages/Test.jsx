@@ -22,7 +22,7 @@ export default function Test() {
           {/* <Box maxW='32rem' pt="50px" pl="30px" pb='50px'pr='150px' boxShadow='2xl' ml='25px'mt='30px'mr='20px' rounded='md' bg='blue.100'> */}
           <Link to='/breastcancer'>
             <HorCard
-                a="https://th.bing.com/th/id/OIP.gZX4w9AnZ1Ch8M2BBLs2HAHaHZ?w=196&h=195&c=7&r=0&o=5&dpr=1.2&pid=1.7"
+                a="https://img.freepik.com/free-vector/breast-cancer-awareness-concept_23-2148641276.jpg?t=st=1720457442~exp=1720461042~hmac=f6455b4c5361d58dbe31f3e67494c68c04181a161e710ca1097e35753dfaee7a&w=740"
                 b="Check out "
                 c="Breast cancer is one of the most common types of cancer that affects millions of"
                 d="Test Now"
@@ -33,7 +33,7 @@ export default function Test() {
         <HStack bg="blue.300" color="white" py="80px">
           <Link to='/diabetes'>
             <HorCard
-                a="https://www.howard-finley.co.uk/wp-content/uploads/2020/06/dreamstime_l_180162487-scaled.jpg"
+                a="https://img.freepik.com/free-photo/diabetic-person-checking-their-glucose-level_52683-135690.jpg?t=st=1720458418~exp=1720462018~hmac=bbc901eeacc6ec9d90b2c948826b5c62943061d9d67d13d7dec6f897eb5834db&w=900"                
                 b="Check out"
                 c="Diabetes is a chronic condition that affects how your body uses blood sugar (glucose)."
                 d="Test Now"
@@ -59,7 +59,7 @@ export default function Test() {
           <Link to='/heartdisease'>
             
             <HorCard
-                a="https://www.findatopdoc.com/var/fatd/storage/images/_aliases/article_main/media/images/heartdisease/409477-1-eng-US/heartdisease.jpg"
+                a="https://img.freepik.com/free-photo/top-view-tensiometer-checking-blood-pressure_23-2150456071.jpg?t=st=1720458536~exp=1720462136~hmac=546a49b05dd7f47ef24aca0aa4c45f12cd6c5dd6e3602fc0d25e8e80ec9a3f8e&w=900"               
                 b="Check out "
                 c="Heart disease is a term used to describe a range of conditions that affect the heart."
                 d="Test Now"
