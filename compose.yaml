@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+
+  web:
+
+    build: ./
+
+    ports:
+      - "5173:5173"
+      - "5000:5000"
+
+    environment:
+      - HEART_DISEASE_APIKEY=${HEART_DISEASE_APIKEY}
+      - API_KEY=${API_KEY}
+      - VITE_APPWRITE_ENDPOINT=${VITE_APPWRITE_ENDPOINT}
+      - VITE_APPWRITE_PROJECT_ID=${VITE_APPWRITE_PROJECT_ID}
+      - VITE_APPWRITE_DATABASE_ID=${VITE_APPWRITE_DATABASE_ID}
+
+    develop:
+
+      watch:
+        - path: ./package.json
+          action: rebuild
+        
+        - path: ./package-lock.json
+          action: rebuild
+
+        - path: ./
+          target: /app
+          action: sync
+
+  # backend:
+  #   build:
+  #     context: ./src/backend
+  #     dockerfile: Dockerfile
+
+  #   ports:
+  #     - "5000:5000"
+
+  #   environment:
+  #     - HEART_DISEASE_APIKEY=${HEART_DISEASE_APIKEY}
+  #     - API_KEY=${API_KEY}
+  #     - VITE_APPWRITE_ENDPOINT=${VITE_APPWRITE_ENDPOINT}
+  #     - VITE_APPWRITE_PROJECT_ID=${VITE_APPWRITE_PROJECT_ID}
+  #     - VITE_APPWRITE_DATABASE_ID=${VITE_APPWRITE_DATABASE_ID}
+
+  #   develop:
+
+  #     watch:
+
+  #       - path: ./server.cjs
+  #         action: rebuild
+
+        
+  #       - path: ./
+  #         target: /app
+  #         action: sync
