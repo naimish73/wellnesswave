@@ -28,7 +28,7 @@ const Register = () => {
     const userInfo = { name, email, password1};
     const result = await registerUser(userInfo)
 
-    console.log(userInfo)
+   
     if(result.success) {
       navigate('/')
     } else {

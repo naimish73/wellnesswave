@@ -20,9 +20,6 @@ const Login = () => {
     const email = loginForm.current.email.value
     const password = loginForm.current.password.value
 
-    console.log('email', email)
-    console.log('password', password)
-    
     const userInfo = {email, password}
     const result = await loginUser(userInfo)
     if(result.success) {
